@@ -1,0 +1,7 @@
+syntax = "proto3";
+package proto;
+option go_package = "github.com/i-chi-li/example-go-bazel-protobuf/proto";
+import "proto/user.proto";
+service Greeter {
+  rpc SayHello(User) returns (User) {}
+}

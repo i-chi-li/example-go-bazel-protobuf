@@ -1,0 +1,6 @@
+syntax = "proto3";
+package proto;
+option go_package = "github.com/i-chi-li/example-go-bazel-protobuf/proto";
+message Address {
+  string city = 1;
+}
