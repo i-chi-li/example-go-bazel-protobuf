@@ -13,3 +13,17 @@ gazelle(
     ],
     command = "update-repos",
 )
+
+exports_files(
+    ["proto-copy.bash"],
+    visibility = ["//visibility:public"],
+)
+
+load("//:proto_copy.bzl", "proto_copy")
+
+proto_copy(
+    name = "proto-copy",
+    src = "//proto:proto_go_proto",
+    dir = "generated/proto",
+    visibility = ["//visibility:public"],
+)

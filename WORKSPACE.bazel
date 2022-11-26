@@ -40,6 +40,10 @@ go_register_toolchains(version = "1.19")
 
 # gazelle ツールを読み込む
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("//:deps.bzl", "go_dependencies")
+
+# gazelle:repository_macro deps.bzl%go_dependencies
+go_dependencies()
 
 # go_repository_default_config のデフォルト値は、 "//:WORKSPACE" のため設定が必要となる
 gazelle_dependencies(go_repository_default_config = "//:WORKSPACE.bazel")
