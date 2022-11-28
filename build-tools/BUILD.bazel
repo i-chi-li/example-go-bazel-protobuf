@@ -1,0 +1,7 @@
+exports_files(
+    [
+        "copy_proto.bash",
+        "copy_proto.bat",
+    ],
+    visibility = ["//visibility:public"],
+)

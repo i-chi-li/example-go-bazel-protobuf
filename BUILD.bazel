@@ -19,11 +19,11 @@ exports_files(
     visibility = ["//visibility:public"],
 )
 
-load("//:proto_copy.bzl", "proto_copy")
+load("//build-tools:copy_proto.bzl", "copy_proto")
 
-proto_copy(
-    name = "proto-copy",
+copy_proto(
+    name = "copy-proto",
     src = "//proto:proto_go_proto",
-    dir = "generated/proto",
+    dst = "generated/proto",
     visibility = ["//visibility:public"],
 )
