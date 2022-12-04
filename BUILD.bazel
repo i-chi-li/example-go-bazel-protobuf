@@ -14,11 +14,6 @@ gazelle(
     command = "update-repos",
 )
 
-exports_files(
-    ["proto-copy.bash"],
-    visibility = ["//visibility:public"],
-)
-
 load("//build-tools:copy_proto.bzl", "copy_proto")
 
 copy_proto(
